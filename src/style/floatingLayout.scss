@@ -1,0 +1,78 @@
+.login-layout,
+.login-form-container {
+	height: 100%;
+	width: 100%;
+}
+
+.login-form-container {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.form {
+	width: 70%;
+	height: 70%;
+	display: flex;
+	flex-direction: column;
+	background: #d3ebfc;
+	border-radius: 20px;
+	max-width: 700px;
+	box-shadow: 0px 0px 5px 1px rgba(126, 126, 126, 0.151);
+	form {
+		width: 100%;
+		padding: 30px 20px;
+		box-sizing: border-box;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+
+		h1 {
+			width: 100%;
+		}
+		button {
+			height: 40px;
+			width: 20%;
+			border: none;
+			outline: none;
+			background: rgba(86, 106, 219, 0.692);
+			border-radius: 7px;
+			font-size: 28px;
+			color: #fff;
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			svg {
+				width: 15px;
+				height: 15px;
+			}
+			&:disabled {
+				cursor: not-allowed;
+				opacity: 0.3;
+			}
+		}
+	}
+}
+.floating-socials {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 30px;
+}
+.box {
+	position: relative;
+	flex: 1 1 auto;
+	// height: 100%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	.monstrik {
+		cursor: pointer;
+		width: 75px;
+		height: 75px;
+		position: absolute;
+		bottom: 10%;
+		left: calc(50% - 37.5px);
+	}
+}
