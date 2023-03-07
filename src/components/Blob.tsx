@@ -37,9 +37,10 @@ const Blob = ({ size, color, wanderCoords }: BlobProps) => {
 				background: color,
 				position: 'absolute',
 				borderRadius: '50%',
-				transition: 'all ease 1s',
-				filter: 'blur(20px)',
+				transition: 'all cubic-bezier(0, 0, 0, 0) 1.5s',
+				filter: 'blur(80px)',
 				zIndex: -1,
+				opacity:0.9,
 			}}
 		/>
 	);

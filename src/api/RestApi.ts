@@ -1,10 +1,12 @@
+// не представилось шанса использовать, так что просто показываю...
+
 export interface ApiResponse {
 	status: number;
 }
 
 export interface LoginResponse extends ApiResponse {
 	data: {
-		access_toke: string;
+		access_token: string;
 		refresh_token: string;
 	};
 }

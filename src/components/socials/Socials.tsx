@@ -8,10 +8,10 @@ type SocialLayout = 'vertical' | 'horizontal';
 const Socials = ({layout}: {layout: SocialLayout}) => {
     return (
         <div className={`socials ${layout}`}>
-           <Link to='https://github.com/Klimenteen'>
+           <Link target="_blank" to='https://github.com/Klimenteen'>
                 <GithubIcon/>
            </Link>
-           <Link to='https://t.me/Kliment_dev'>
+           <Link target="_blank" to='https://t.me/Kliment_dev'>
                 <TelegramIcon/>
            </Link>
         </div>

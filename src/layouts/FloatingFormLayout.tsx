@@ -5,9 +5,11 @@ const FloatingFormLayout = ({ children }: { children?: ReactNode }) => {
     return (
         <>
             <div className="login-layout">{children}</div>
-            <div className="floating-socials">
-              <Socials layout="vertical" />  
-            </div>
+            {window.innerWidth > 768 ? (
+                <Socials layout="vertical" />
+            ) : (
+                <Socials layout="horizontal" />
+            )}
         </>
     );
 };
