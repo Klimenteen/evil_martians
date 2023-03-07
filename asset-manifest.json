@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/evil_martians/static/css/main.0e9796e3.css",
+    "main.js": "/evil_martians/static/js/main.6ec8fa8b.js",
+    "static/js/787.0ba1a56e.chunk.js": "/evil_martians/static/js/787.0ba1a56e.chunk.js",
+    "index.html": "/evil_martians/index.html",
+    "main.0e9796e3.css.map": "/evil_martians/static/css/main.0e9796e3.css.map",
+    "main.6ec8fa8b.js.map": "/evil_martians/static/js/main.6ec8fa8b.js.map",
+    "787.0ba1a56e.chunk.js.map": "/evil_martians/static/js/787.0ba1a56e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0e9796e3.css",
+    "static/js/main.6ec8fa8b.js"
+  ]
+}
