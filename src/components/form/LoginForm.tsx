@@ -5,7 +5,7 @@ import { validateEmail, validatePass } from "../../tools/validate";
 import MartiansIcon from "../icons/MartiansIcon";
 import { randomAnim } from "../../tools/randomAmin";
 import Spinner from "../Spinner";
-import Lock from '../icons/Lock';
+import Lock from "../icons/Lock";
 
 const LoginForm = () => {
     const validateTimeOut = useRef<any>(null);
@@ -20,19 +20,13 @@ const LoginForm = () => {
 
     const [requesting, setRequesting] = useState<boolean>(false);
 
-    console.log(isEmailValid && isPassValid);
+    // console.log(isEmailValid && isPassValid);
 
     const checkValidity = (string: string, type: string) => {
         clearTimeout(validateTimeOut.current);
         validateTimeOut.current = setTimeout(() => {
-            if (type === "email")
-                validateEmail(string)
-                    ? setIsEmailValid(true)
-                    : setIsEmailValid(false);
-            else if (type === "password")
-                validatePass(string)
-                    ? setIsPassValid(true)
-                    : setIsPassValid(false);
+            if (type === "email") validateEmail(string) ? setIsEmailValid(true) : setIsEmailValid(false);
+            else if (type === "password") validatePass(string) ? setIsPassValid(true) : setIsPassValid(false);
         }, 200);
     };
 
@@ -65,9 +59,7 @@ const LoginForm = () => {
                     <h1>А ну-ка, входи</h1>
 
                     <input
-                        className={
-                            !isEmailValid && wasSubmitted ? "non-valid" : ""
-                        }
+                        className={!isEmailValid && wasSubmitted ? "non-valid" : ""}
                         type="email"
                         name="email"
                         value={login}
@@ -77,9 +69,7 @@ const LoginForm = () => {
                         }}
                     />
                     <input
-                        className={
-                            !isPassValid && wasSubmitted ? "non-valid" : ""
-                        }
+                        className={!isPassValid && wasSubmitted ? "non-valid" : ""}
                         type="password"
                         name="password"
                         value={password}
@@ -90,17 +80,13 @@ const LoginForm = () => {
                     />
 
                     <button type="submit" disabled={!isEmailValid || !isPassValid || requesting}>
-                    {(!isEmailValid || !isPassValid) && <Lock /> }
+                        {(!isEmailValid || !isPassValid) && <Lock />}
                         {requesting && <Spinner />}
                         {!requesting && <span>Вход</span>}
                     </button>
                 </form>
                 <div className="login-form__logo">
-                    <div
-                        className="login-form__logo-monstrik"
-                        onClick={() => setMonsterAnim(randomAnim())}
-                        style={{ animation: `${monsterAnim} 1s forwards` }}
-                    >
+                    <div className="login-form__logo-monstrik" onClick={() => setMonsterAnim(randomAnim())} style={{ animation: `${monsterAnim} 1s forwards` }}>
                         <MartiansIcon />
                     </div>
                 </div>
